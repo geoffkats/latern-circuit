@@ -1,7 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Keep Node built-ins out of the worker graph if a dependency probes for them.
+  // Next 16 defaults to Turbopack; keep an empty turbopack block so a webpack
+  // fallback config does not abort `next dev`.
+  turbopack: {},
   webpack: (config) => {
     config.resolve = config.resolve ?? {};
     config.resolve.fallback = {
