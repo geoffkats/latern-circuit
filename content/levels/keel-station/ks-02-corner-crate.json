@@ -1,0 +1,39 @@
+{
+  "id": "ks-02-corner-crate",
+  "title": "Corner Crate",
+  "mode": "robot",
+  "worldId": "keel-station",
+  "conceptId": "turn",
+  "story": {
+    "intro": "A supply crate sits on the north spur. Pebble faces the wrong way.",
+    "success": "Pebble holds the crate on the spur.",
+    "blocked": "The crate is still on the floor."
+  },
+  "hints": [
+    "The crate is north of Pebble.",
+    "Turn before you step onto that tile.",
+    "Pick up the crate after you arrive."
+  ],
+  "apiAllow": ["move", "turn_left", "pick_item"],
+  "constraints": {
+    "maxLines": 5,
+    "forbiddenKeywords": ["for", "while", "import"],
+    "maxMoves": 4
+  },
+  "stars": {
+    "efficientMaxMoves": 3,
+    "elegantMaxLines": 3,
+    "bonusTechnique": null
+  },
+  "grid": { "width": 2, "height": 2 },
+  "start": { "x": 0, "y": 0, "facing": "east" },
+  "walls": [],
+  "finalVars": null,
+  "items": [{ "x": 0, "y": 1, "kind": "crate", "count": 1 }],
+  "goal": {
+    "x": 0,
+    "y": 1,
+    "holding": [{ "kind": "crate", "count": 1 }],
+    "collectKinds": ["crate"]
+  }
+}

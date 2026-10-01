@@ -1,0 +1,39 @@
+{
+  "id": "ks-01-bay-walk",
+  "title": "Bay Walk",
+  "mode": "robot",
+  "worldId": "keel-station",
+  "conceptId": "sequence",
+  "story": {
+    "intro": "Pebble waits at the bay door. The docking pad is three tiles ahead.",
+    "success": "Pebble reaches the docking pad.",
+    "blocked": "Pebble stopped short of the pad."
+  },
+  "hints": [
+    "The pad is east of Pebble.",
+    "One move() covers one tile.",
+    "Take three steps in a row."
+  ],
+  "apiAllow": ["move"],
+  "constraints": {
+    "maxLines": 4,
+    "forbiddenKeywords": ["for", "while", "import"],
+    "maxMoves": 4
+  },
+  "stars": {
+    "efficientMaxMoves": 3,
+    "elegantMaxLines": 3,
+    "bonusTechnique": null
+  },
+  "grid": { "width": 4, "height": 1 },
+  "start": { "x": 0, "y": 0, "facing": "east" },
+  "walls": [],
+  "finalVars": null,
+  "items": [],
+  "goal": {
+    "x": 3,
+    "y": 0,
+    "holding": [],
+    "collectKinds": []
+  }
+}

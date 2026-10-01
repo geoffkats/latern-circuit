@@ -1,0 +1,39 @@
+{
+  "id": "ks-04-clear-ahead",
+  "title": "Clear Ahead",
+  "mode": "robot",
+  "worldId": "keel-station",
+  "conceptId": "sensor",
+  "story": {
+    "intro": "A bulkhead blocks the east. Ask before you roll.",
+    "success": "Pebble turns onto the clear spur.",
+    "blocked": "A blind move hits the bulkhead."
+  },
+  "hints": [
+    "Look ahead before you move.",
+    "front_is_clear is false when a wall is ahead.",
+    "Turn toward the open tile, then move when it is clear."
+  ],
+  "apiAllow": ["move", "turn_left", "front_is_clear"],
+  "constraints": {
+    "maxLines": 6,
+    "forbiddenKeywords": ["for", "while", "import"],
+    "maxMoves": 3
+  },
+  "stars": {
+    "efficientMaxMoves": 2,
+    "elegantMaxLines": 5,
+    "bonusTechnique": "uses_sensor"
+  },
+  "grid": { "width": 2, "height": 2 },
+  "start": { "x": 0, "y": 0, "facing": "east" },
+  "walls": [{ "x": 1, "y": 0 }],
+  "finalVars": null,
+  "items": [],
+  "goal": {
+    "x": 0,
+    "y": 1,
+    "holding": [],
+    "collectKinds": []
+  }
+}

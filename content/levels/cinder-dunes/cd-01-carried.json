@@ -1,0 +1,35 @@
+{
+  "id": "cd-01-carried",
+  "title": "Carried",
+  "mode": "adventure",
+  "worldId": "cinder-dunes",
+  "conceptId": "variable",
+  "story": {
+    "intro": "Nia reaches the dune marker and remembers what she carries.",
+    "success": "The marker accepts the count she stored.",
+    "blocked": "The marker wants the last value Nia set, not an earlier one."
+  },
+  "hints": [
+    "Walk east to the marker.",
+    "Store the count in a name called carried.",
+    "The last value of carried must be 1."
+  ],
+  "apiAllow": ["move"],
+  "constraints": {
+    "maxLines": 4,
+    "forbiddenKeywords": ["for", "while", "import"],
+    "maxMoves": 2
+  },
+  "stars": {
+    "efficientMaxMoves": 1,
+    "elegantMaxLines": 3,
+    "bonusTechnique": "uses_variable"
+  },
+  "grid": { "width": 2, "height": 1 },
+  "start": { "x": 0, "y": 0, "facing": "east" },
+  "walls": [],
+  "finalVars": { "carried": 1 },
+  "items": [],
+  "hazards": [],
+  "goal": { "x": 1, "y": 0 }
+}

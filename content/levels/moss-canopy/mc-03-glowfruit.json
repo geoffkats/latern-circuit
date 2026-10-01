@@ -1,0 +1,37 @@
+{
+  "id": "mc-03-glowfruit",
+  "title": "Glowfruit",
+  "mode": "adventure",
+  "worldId": "moss-canopy",
+  "conceptId": "pick-put",
+  "story": {
+    "intro": "A glowfruit rests on the path. Carry it past the thorns to the shrine.",
+    "success": "The shrine takes the glowfruit from Nia's hands.",
+    "blocked": "Leave the fruit behind and the shrine stays dark."
+  },
+  "hints": [
+    "The fruit is one step east.",
+    "Pick it up before you leave that tile.",
+    "Carry it one more step to the shrine."
+  ],
+  "apiAllow": ["move", "pick_item"],
+  "constraints": {
+    "maxLines": 5,
+    "forbiddenKeywords": ["for", "while", "import"],
+    "maxMoves": 4
+  },
+  "stars": {
+    "efficientMaxMoves": 3,
+    "elegantMaxLines": 3,
+    "bonusTechnique": null
+  },
+  "grid": { "width": 3, "height": 2 },
+  "start": { "x": 0, "y": 0, "facing": "east" },
+  "walls": [],
+  "finalVars": null,
+  "items": [
+    { "x": 1, "y": 0, "kind": "glowfruit", "count": 1, "required": true }
+  ],
+  "hazards": [{ "x": 0, "y": 1, "kind": "thorn" }],
+  "goal": { "x": 2, "y": 0 }
+}

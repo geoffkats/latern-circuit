@@ -1,0 +1,35 @@
+{
+  "id": "mc-02-the-bend",
+  "title": "The Bend",
+  "mode": "adventure",
+  "worldId": "moss-canopy",
+  "conceptId": "turn",
+  "story": {
+    "intro": "The trail turns north. A wall blocks the east.",
+    "success": "Nia follows the bend to the clearing.",
+    "blocked": "That way is closed by a trunk."
+  },
+  "hints": [
+    "Face the open path before you step.",
+    "turn_left faces Nia toward the north.",
+    "Turn once, then take one step."
+  ],
+  "apiAllow": ["move", "turn_left"],
+  "constraints": {
+    "maxLines": 4,
+    "forbiddenKeywords": ["for", "while", "import"],
+    "maxMoves": 3
+  },
+  "stars": {
+    "efficientMaxMoves": 2,
+    "elegantMaxLines": 2,
+    "bonusTechnique": null
+  },
+  "grid": { "width": 2, "height": 2 },
+  "start": { "x": 0, "y": 0, "facing": "east" },
+  "walls": [{ "x": 1, "y": 0 }],
+  "finalVars": null,
+  "items": [],
+  "hazards": [],
+  "goal": { "x": 0, "y": 1 }
+}

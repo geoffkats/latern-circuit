@@ -1,0 +1,39 @@
+{
+  "id": "ks-03-two-crates",
+  "title": "Two Crates",
+  "mode": "robot",
+  "worldId": "keel-station",
+  "conceptId": "stack",
+  "story": {
+    "intro": "Two crates are stacked on Pebble's pad. Lift both into the hold.",
+    "success": "Both crates ride in Pebble's hands.",
+    "blocked": "A crate remains on the floor."
+  },
+  "hints": [
+    "Both crates share this tile.",
+    "Each pick_item takes the top crate.",
+    "Pick twice so the stack is empty."
+  ],
+  "apiAllow": ["pick_item"],
+  "constraints": {
+    "maxLines": 3,
+    "forbiddenKeywords": ["for", "while", "import"],
+    "maxMoves": 3
+  },
+  "stars": {
+    "efficientMaxMoves": 2,
+    "elegantMaxLines": 2,
+    "bonusTechnique": null
+  },
+  "grid": { "width": 1, "height": 1 },
+  "start": { "x": 0, "y": 0, "facing": "north" },
+  "walls": [],
+  "finalVars": null,
+  "items": [{ "x": 0, "y": 0, "kind": "crate", "count": 2 }],
+  "goal": {
+    "x": 0,
+    "y": 0,
+    "holding": [{ "kind": "crate", "count": 2 }],
+    "collectKinds": ["crate"]
+  }
+}
