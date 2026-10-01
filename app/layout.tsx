@@ -18,7 +18,11 @@ export const metadata: Metadata = {
     "A Python learning game. Nia and Pebble carry a short program across a grid.",
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
     <html
       lang="en"

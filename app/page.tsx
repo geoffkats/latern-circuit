@@ -1,17 +1,40 @@
-export default function Home() {
+import Link from "next/link";
+import { copy } from "@/lib/copy/en";
+import { phase1Levels } from "@/lib/levels/load-level";
+
+export default function HomePage() {
   return (
-    <main className="mx-auto flex w-full max-w-xl flex-1 flex-col justify-center gap-4 px-6 py-16">
-      <p className="text-sm font-medium tracking-wide text-amber-700 dark:text-amber-300">
-        Lantern Circuit
-      </p>
-      <h1 className="text-3xl font-semibold tracking-tight">
-        A Python game about walking a grid.
-      </h1>
-      <p className="text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-        Nia walks the adventure maps. Pebble rolls the robot halls. This build
-        is the simulator: the rules that decide a move, a wall, and a win.
-        Levels, the Python runner, and the player come next.
-      </p>
+    <main className="mx-auto flex w-full max-w-3xl flex-1 flex-col gap-8 px-6 py-12">
+      <header className="space-y-3">
+        <p className="text-sm font-medium tracking-wide text-amber-800">
+          {copy.productName}
+        </p>
+        <h1 className="text-4xl font-semibold tracking-tight text-zinc-900">
+          {copy.productName}
+        </h1>
+        <p className="max-w-xl text-lg leading-8 text-zinc-600">
+          {copy.homeLead}
+        </p>
+      </header>
+
+      <ol className="space-y-3">
+        {phase1Levels.map((level, index) => (
+          <li key={level.id}>
+            <Link
+              href={`/play/${level.id}`}
+              className="flex items-baseline justify-between gap-4 border-b border-zinc-200 py-3 transition hover:border-amber-700"
+            >
+              <span className="text-zinc-900">
+                <span className="mr-3 text-sm text-zinc-400">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                {level.title}
+              </span>
+              <span className="text-sm text-amber-800">{copy.play}</span>
+            </Link>
+          </li>
+        ))}
+      </ol>
     </main>
   );
 }
