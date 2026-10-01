@@ -1,0 +1,42 @@
+export const copy = {
+  productName: "Lantern Circuit",
+  homeLead: "Eight short levels. Write a little Python, watch the grid answer.",
+  play: "Play",
+  backToLevels: "All levels",
+  run: "Run",
+  running: "Running…",
+  loadingPython: "Loading Python…",
+  cancel: "Cancel",
+  playTransport: "Play",
+  pauseTransport: "Pause",
+  stepForward: "Step forward",
+  stepBack: "Step back",
+  speedSlow: "Slow speed",
+  speedNormal: "Normal speed",
+  speedFast: "Fast speed",
+  revealHint: "Show next hint",
+  hintsTitle: "Hints",
+  noMoreHints: "No more hints",
+  storyIntro: "Briefing",
+  resultWon: "Goal complete",
+  resultLost: "Not yet",
+  starsLabel: "Stars for this run",
+  bonusTechnique: "Bonus technique noted",
+  conceptDismiss: "Got it",
+  fontSmall: "Smaller text",
+  fontMedium: "Default text",
+  fontLarge: "Larger text",
+  constraintMaxLines: (max: number) =>
+    `This level allows at most ${max} lines of code.`,
+  constraintForbidden: (words: string[]) =>
+    `This level does not use: ${words.join(", ")}.`,
+  emptyEditor: "Write your program here.",
+  actorAnnounce: (
+    name: string,
+    facing: string,
+    x: number,
+    y: number,
+  ) => `${name} faces ${facing} on tile ${x}, ${y}`,
+} as const;
+
+export type Copy = typeof copy;
